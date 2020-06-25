@@ -7,6 +7,9 @@ import org.forgerock.openam.auth.node.api.NodeProcessException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -17,14 +20,10 @@ public class TelesignHelper {
     public String getTelephoneNumber(AMIdentity identity, String mobilePhoneAttributeName) throws NodeProcessException {
         Set<String> telephoneNumbers;
         try {
-            if (!identity.getAttributes().containsKey(mobilePhoneAttributeName)) {
-                logger.debug ("Attribute " + mobilePhoneAttributeName + " was not found");
-                return "attributeNotFound";
-            }
             telephoneNumbers = identity.getAttribute(mobilePhoneAttributeName);
         } catch (IdRepoException | SSOException e) {
             e.printStackTrace();
-            return "attributeNotFound";
+            return "phoneNumberNotFound";
         }
 
         if (telephoneNumbers != null && !telephoneNumbers.isEmpty()) {

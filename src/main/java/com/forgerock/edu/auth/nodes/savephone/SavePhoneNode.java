@@ -22,10 +22,7 @@ import com.iplanet.sso.SSOException;
 import com.sun.identity.idm.AMIdentity;
 import com.sun.identity.idm.IdRepoException;
 import com.sun.identity.idm.IdUtils;
-import org.forgerock.openam.auth.node.api.Action;
-import org.forgerock.openam.auth.node.api.Node;
-import org.forgerock.openam.auth.node.api.SingleOutcomeNode;
-import org.forgerock.openam.auth.node.api.TreeContext;
+import org.forgerock.openam.auth.node.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,9 +40,9 @@ import static org.forgerock.openam.auth.node.api.SharedStateConstants.USERNAME;
  * A node that checks to see if zero-page login headers have specified username and whether that username is in a group
  * permitted to use zero-page login headers.
  */
-@Node.Metadata(outcomeProvider  = SingleOutcomeNode.OutcomeProvider.class,
-               configClass      = SavePhoneNode.Config.class)
-public class SavePhoneNode extends SingleOutcomeNode {
+@Node.Metadata(outcomeProvider = AbstractDecisionNode.OutcomeProvider.class,
+        configClass = SavePhoneNode.Config.class)
+public class SavePhoneNode extends AbstractDecisionNode {
 
     private final Logger logger = LoggerFactory.getLogger("amAuth");
     private static final String BUNDLE = SavePhoneNode.class.getName().replace(".", "/");
@@ -79,10 +76,11 @@ public class SavePhoneNode extends SingleOutcomeNode {
             userIdentity.setAttributes(attributes);
             userIdentity.store();
         } catch (IdRepoException | SSOException ex) {
-            logger.error("Unable to update user {} in realm {} with attributes {}", username, realm, attributes, ex);
+            ex.printStackTrace();
+            logger.error("Unable to update user {} in realm {} with attributes {}. Make sure the attribute name is correct in the tree configuration", username, realm, attributes, ex);
+            return goTo(false).build();
         }
-
-        return goToNext().build();
+        return goTo(true).build();
     }
 
 }
