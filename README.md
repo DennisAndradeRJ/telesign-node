@@ -24,7 +24,7 @@ Only US phone numbers are supported on version 1.0.0. Multi country support will
 
 Follow those steps to deploy these nodes:
 
-1) Download telesign-node-1.0.jar and telesign-2.2.2.jar from the releases tab on github here.
+1) Download telesign-node-1.0.jar and telesign-2.2.2.jar from the releases folder.
 2) Copy telesign-node-1.0.jar into the tomcat/webapps/am/WEB-INF/lib directory where AM is deployed. 
 3) Copy telesign-2.2.2.jar into the tomcat/lib directory
 4) Restart tomcat to pick up the new nodes. The nodes will then appear in the authentication trees components palette.
