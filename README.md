@@ -75,14 +75,6 @@ This node will save the phone number to the user profile to use it in future aut
 ![Telesign_SMS_Tree](./example-call.png)
 
 
-```js
- Nodes To be Configured:
-    * Telesign Call Sende
-    * Register Phone Number Collector
-    * Save Phone Number
-```
-
-
 
 
 
