@@ -1,0 +1,10 @@
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/utilities/TelesignHelper.java
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/sms/TelesignSmsSenderNodePlugin.java
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/call/TelesignCallSenderNodePlugin.java
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/registerphone/RegisterPhoneNode.java
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/savephone/SavePhoneNode.java
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/sms/TelesignSmsSenderNode.java
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/call/TelesignCallSenderNode.java
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/utilities/ClientScriptUtilities.java
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/registerphone/RegisterPhoneNodePlugin.java
+/Users/dennis.andrade/Documents/SourceCode/telesign-node/src/main/java/com/forgerock/edu/auth/nodes/savephone/SavePhoneNodePlugin.java
