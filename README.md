@@ -55,7 +55,7 @@ This node will collect the phone number from the user if one is not found in the
 
 
 ### Save Phone Number
-This node will save the phone number to the user profile to use it in future authentication flows.
+This node will save the phone number to the user profile to use it in future authentication flows. For admins only: It will check if the Phone Number attribute name is valid in order to retrieve or save the phone number in the store.
 
 
 ## Configuring Telesign SMS Auth Tree
