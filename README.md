@@ -50,7 +50,7 @@ This node will send a SMS to the phone number registered in the user's profile u
 
 ### Register Phone Number Collector Node
 This node will collect the phone number from the user if one is not found in the user store. The following fields are required:
-* **Message** - Label message that will be displayed on top of the screen with the explanation of the page is to the user.
+* **Message** - Label message that will be displayed on top of the screen with the explanation of what the registration page is to the user.
 * **Prompt Message** - Message displayed in the textbox for the user to enter their phone number.
 
 
